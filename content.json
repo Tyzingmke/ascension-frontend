@@ -323,8 +323,8 @@
           "carousel": false,
           "blockMaxWidth": 0,
           "blockAlign": "left",
-          "blockOffsetX": -38,
-          "blockOffsetY": -56,
+          "blockOffsetX": 0,
+          "blockOffsetY": 0,
           "titleColor": "#759fff"
         },
         {
