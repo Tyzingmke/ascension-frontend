@@ -1,3 +1,5 @@
+import type { SiteContent } from './content-state'
+
 export const organization = {
   name: 'Ascension Experience Society',
   tagline: 'Transforming People. Strengthening Communities. Creating Lasting Impact.',
@@ -13,17 +15,67 @@ export const navigation = [
   {
     label: 'About',
     href: '#/about',
-    children: ['Who We Are', 'Our Story', 'Vision & Mission', 'What We Believe', 'Our Values', 'Leadership', 'Transparency'],
+    children: [
+      { label: 'Who We Are', href: '#/about/who-we-are' },
+      { label: 'Our Story', href: '#/about/story' },
+      { label: 'Vision & Mission', href: '#/about/vision-mission' },
+      { label: 'What We Believe', href: '#/about/beliefs' },
+      { label: 'Our Values', href: '#/about/values' },
+      { label: 'Leadership', href: '#/leadership' },
+      { label: 'Transparency', href: '#/transparency' },
+    ],
   },
   {
     label: 'Our Work',
     href: '#/work',
-    children: ['Student & Youth Development', 'Women Empowerment', 'Leadership Development', 'Hospital Outreach', 'Missions', 'Environment'],
+    children: [
+      { label: 'Student & Youth Development', href: '#/work/student-youth-development' },
+      { label: 'Women Empowerment', href: '#/work/women-empowerment' },
+      { label: 'Leadership Development', href: '#/work/leadership-development' },
+      { label: 'Hospital Outreach', href: '#/work/hospital-outreach' },
+      { label: 'Missions', href: '#/work/missions-discipleship' },
+      { label: 'Environment', href: '#/work/environmental-conservation' },
+    ],
   },
-  { label: 'Impact', href: '#/impact', children: ['Our Impact', 'Projects', 'Stories of Change', 'Reports'] },
-  { label: 'News & Events', href: '#/news-events', children: ['News', 'Events', 'Gallery'] },
-  { label: 'Resources', href: '#/resources', children: ['Publications', 'Training Materials', 'Downloads'] },
-  { label: 'Get Involved', href: '#/get-involved', children: ['Volunteer', 'Mentor', 'Partner', 'Sponsor', 'Donate'] },
+  {
+    label: 'Impact',
+    href: '#/impact',
+    children: [
+      { label: 'Our Impact', href: '#/impact' },
+      { label: 'Projects', href: '#/projects' },
+      { label: 'Stories of Change', href: '#/stories' },
+      { label: 'Reports', href: '#/reports' },
+    ],
+  },
+  {
+    label: 'News & Events',
+    href: '#/news-events',
+    children: [
+      { label: 'News', href: '#/news' },
+      { label: 'Events', href: '#/events' },
+      { label: 'Gallery', href: '#/gallery' },
+    ],
+  },
+  {
+    label: 'Resources',
+    href: '#/resources',
+    children: [
+      { label: 'Publications', href: '#/resources/publications' },
+      { label: 'Training Materials', href: '#/resources/training-materials' },
+      { label: 'Downloads', href: '#/resources/downloads' },
+    ],
+  },
+  {
+    label: 'Get Involved',
+    href: '#/get-involved',
+    children: [
+      { label: 'Volunteer', href: '#/volunteer' },
+      { label: 'Mentor', href: '#/mentor' },
+      { label: 'Partner', href: '#/partner' },
+      { label: 'Sponsor', href: '#/sponsor' },
+      { label: 'Donate', href: '#/donate' },
+    ],
+  },
 ]
 
 export const programs = [
@@ -77,6 +129,48 @@ export const programs = [
   },
 ]
 
+export const pages = [
+  {
+    title: 'Who We Are',
+    slug: 'about/who-we-are',
+    menuGroup: 'About',
+    status: 'Published',
+    blocks: [
+      {
+        type: 'paragraph' as const,
+        text: 'Ascension Experience Society is a community-based organization built around people, service, leadership, compassion, and sustainable impact.',
+      },
+      {
+        type: 'paragraph' as const,
+        text: 'The organization brings together communities, volunteers, churches, institutions, professionals, and partners around a shared commitment to transformation.',
+      },
+    ],
+  },
+]
+
+export const people = [
+  {
+    id: 'founder',
+    name: 'Founder Name',
+    role: 'Founder',
+    profileType: 'founder' as const,
+    bio: 'Founder profile and biography will be added by the organization.',
+    photo: '',
+    reportsTo: '',
+  },
+  {
+    id: 'co-founder',
+    name: 'Co-Founder Name',
+    role: 'Co-Founder',
+    profileType: 'founder' as const,
+    bio: 'Co-founder profile and biography will be added by the organization.',
+    photo: '',
+    reportsTo: 'founder',
+  },
+]
+
+export const peopleRoles = ['Founder', 'Co-Founder', 'Executive Director', 'Program Lead', 'Board Member', 'Team Member']
+
 export const impactStats = [
   { label: 'People reached', value: '1,000+' },
   { label: 'Students trained', value: '500+' },
@@ -90,10 +184,31 @@ export const stories = [
   {
     title: 'From potential to participation',
     summary: 'A young person receives mentorship, finds confidence, and begins serving their community.',
+    blocks: [
+      { type: 'paragraph' as const, text: 'The challenge began with limited access to mentorship and confidence-building opportunities.' },
+      { type: 'image' as const, url: '', alt: 'Story image placeholder', caption: 'Image to be added from the CMS media library.' },
+      { type: 'paragraph' as const, text: 'Through consistent support, the participant found a path toward service and leadership.' },
+    ],
   },
   {
     title: 'Support that restores dignity',
     summary: 'A vulnerable family is met with compassion, practical help, and a pathway toward stability.',
+    blocks: [
+      { type: 'paragraph' as const, text: 'Ascension responds to vulnerable families with dignity, compassion, and practical care.' },
+    ],
+  },
+]
+
+export const news = [
+  {
+    title: 'Ascension prepares new youth leadership activities',
+    slug: 'youth-leadership-activities',
+    excerpt: 'The team is preparing youth-centered leadership and mentorship activities.',
+    status: 'Draft',
+    blocks: [
+      { type: 'paragraph' as const, text: 'The upcoming activities will focus on leadership, public speaking, mentorship, and personal development.' },
+      { type: 'image' as const, url: '', alt: 'Youth training image placeholder', caption: 'Add training image later.' },
+    ],
   },
 ]
 
@@ -115,8 +230,23 @@ export const projects = [
 ]
 
 export const upcomingEvents = [
-  { name: 'Student Leadership Training', date: '20 Aug 2026', type: 'Physical', status: 'Published' },
-  { name: 'Women Empowerment Forum', date: '28 Aug 2026', type: 'Hybrid', status: 'Draft' },
+  {
+    name: 'Student Leadership Training',
+    date: '20 Aug 2026',
+    type: 'Physical',
+    status: 'Published',
+    blocks: [
+      { type: 'paragraph' as const, text: 'A practical leadership training for students and young people.' },
+      { type: 'image' as const, url: '', alt: 'Event image placeholder', caption: 'Event image to be added later.' },
+    ],
+  },
+  {
+    name: 'Women Empowerment Forum',
+    date: '28 Aug 2026',
+    type: 'Hybrid',
+    status: 'Draft',
+    blocks: [{ type: 'paragraph' as const, text: 'A forum for women to learn, lead, and connect.' }],
+  },
 ]
 
 export const footerGroups = [
@@ -138,6 +268,19 @@ export const adminSections = [
   { title: 'Website', items: ['Navigation', 'Footer', 'Homepage', 'Page Builder', 'SEO', 'Redirects'] },
   { title: 'System', items: ['Users', 'Roles', 'Permissions', 'Activity Log', 'Git History', 'Deployment', 'Settings'] },
 ]
+
+export const defaultSiteContent: SiteContent = {
+  organization,
+  programs,
+  pages,
+  peopleRoles,
+  people,
+  projects,
+  stories,
+  news,
+  upcomingEvents,
+  impactStats,
+}
 
 export const roles = [
   { role: 'Super Admin', email: 'Required', mfa: 'Required', access: 'Full system access' },
