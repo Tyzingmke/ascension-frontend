@@ -11,6 +11,44 @@ export const organization = {
     'A community-based organization committed to empowering people, developing responsible leaders, supporting vulnerable communities, and creating sustainable social impact.',
 }
 
+export const appearance = {
+  mode: 'light' as const,
+  themeName: 'ascension' as const,
+  logo: '',
+  favicon: '',
+  primaryColor: '#466450',
+  secondaryColor: '#44667a',
+  accentColor: '#a65f3b',
+  h1Font: 'Inter',
+  h2Font: 'Inter',
+  h3Font: 'Inter',
+  bodyFont: 'Inter',
+  transitionDelay: 650,
+  transitionDuration: 360,
+  transitionStyle: 'fade' as const,
+  transitionQuotes: [
+    'Transformation begins with people.',
+    'Every community carries gifts worth growing.',
+    'Service, leadership, and compassion create lasting impact.',
+  ],
+}
+
+export const defaultPageSettings = {
+  pageStyle: 'standard' as const,
+  contentWidth: 'standard' as const,
+  textAlign: 'left' as const,
+  heroImages: [],
+  heroImageOpacity: 0.35,
+  heroCarousel: false,
+  backgroundImages: [],
+  backgroundOpacity: 0.08,
+  backgroundCarousel: false,
+  titleFont: '',
+  titleSize: 0,
+  titleColor: '',
+  titleAlign: 'left' as const,
+}
+
 export const navigation = [
   {
     label: 'About',
@@ -78,74 +116,165 @@ export const navigation = [
   },
 ]
 
+export const menuGroups = navigation.map((item) => ({ label: item.label }))
+
 export const programs = [
   {
     index: '01',
     slug: 'student-youth-development',
     title: 'Student & Youth Development',
     summary: 'Leadership training, mentorship, life skills, career awareness, academic support, and personal development.',
+    settings: defaultPageSettings,
+    images: [],
+    blocks: [{ type: 'paragraph' as const, text: 'Add detailed student and youth development information from the CMS.' }],
   },
   {
     index: '02',
     slug: 'women-empowerment',
     title: 'Women Empowerment',
     summary: 'Opportunities for women to learn, lead, contribute, and strengthen families and communities.',
+    settings: defaultPageSettings,
+    images: [],
+    blocks: [{ type: 'paragraph' as const, text: 'Add detailed women empowerment information from the CMS.' }],
   },
   {
     index: '03',
     slug: 'leadership-development',
     title: 'Leadership Development',
     summary: 'Practical leadership formation rooted in service, responsibility, integrity, and community transformation.',
+    settings: defaultPageSettings,
+    images: [],
+    blocks: [{ type: 'paragraph' as const, text: 'Add detailed leadership development information from the CMS.' }],
   },
   {
     index: '04',
     slug: 'hospital-outreach',
     title: 'Hospital Outreach',
     summary: 'Compassionate visits, support, prayer, encouragement, and practical care for vulnerable patients and families.',
+    settings: defaultPageSettings,
+    images: [],
+    blocks: [{ type: 'paragraph' as const, text: 'Add detailed hospital outreach information from the CMS.' }],
   },
   {
     index: '05',
     slug: 'missions-discipleship',
     title: 'Missions & Discipleship',
     summary: 'Faith-inspired service, spiritual growth, compassion, truth, and human dignity in action.',
+    settings: defaultPageSettings,
+    images: [],
+    blocks: [{ type: 'paragraph' as const, text: 'Add detailed missions and discipleship information from the CMS.' }],
   },
   {
     index: '06',
     slug: 'environmental-conservation',
     title: 'Environmental Conservation',
     summary: 'Community responsibility, sustainability, care for creation, and practical conservation activities.',
+    settings: defaultPageSettings,
+    images: [],
+    blocks: [{ type: 'paragraph' as const, text: 'Add detailed environmental conservation information from the CMS.' }],
   },
   {
     index: '07',
     slug: 'helping-the-needy',
     title: 'Helping the Needy',
     summary: 'Practical support for vulnerable individuals, families, and communities with dignity and compassion.',
+    settings: defaultPageSettings,
+    images: [],
+    blocks: [{ type: 'paragraph' as const, text: 'Add detailed helping the needy information from the CMS.' }],
   },
   {
     index: '08',
     slug: 'advocacy-peace-building',
     title: 'Advocacy & Peace Building',
     summary: 'Civic responsibility, dialogue, peaceful coexistence, and community participation in solving shared challenges.',
+    settings: defaultPageSettings,
+    images: [],
+    blocks: [{ type: 'paragraph' as const, text: 'Add detailed advocacy and peace building information from the CMS.' }],
   },
 ]
 
+const navigationPages = navigation
+  .filter((group) => group.label !== 'Our Work')
+  .flatMap((group) =>
+    group.children.map((child) => {
+      const slug = child.href.replace('#/', '')
+      return {
+        title: child.label,
+        slug,
+        menuGroup: group.label,
+        status: 'Published',
+        settings: defaultPageSettings,
+        blocks: [
+          {
+            type: 'paragraph' as const,
+            text:
+              slug === 'about/who-we-are'
+                ? 'Ascension Experience Society is a community-based organization built around people, service, leadership, compassion, and sustainable impact.'
+                : `${child.label} content can be edited from the CMS Pages section.`,
+          },
+        ],
+      }
+    }),
+  )
+
 export const pages = [
   {
-    title: 'Who We Are',
-    slug: 'about/who-we-are',
-    menuGroup: 'About',
+    title: 'Homepage',
+    slug: '',
+    menuGroup: 'Homepage',
     status: 'Published',
+    settings: defaultPageSettings,
     blocks: [
       {
-        type: 'paragraph' as const,
-        text: 'Ascension Experience Society is a community-based organization built around people, service, leadership, compassion, and sustainable impact.',
+        type: 'hero' as const,
+        eyebrow: 'Impact. Disrupt. Influence the ecosystem.',
+        title: 'Transforming People. Strengthening Communities. Creating Lasting Impact.',
+        text: organization.description,
+        imageUrls: [],
+        imageOpacity: 0.35,
+        carousel: false,
       },
       {
-        type: 'paragraph' as const,
-        text: 'The organization brings together communities, volunteers, churches, institutions, professionals, and partners around a shared commitment to transformation.',
+        type: 'heroActions' as const,
+        align: 'left' as const,
+        actions: [
+          { label: 'Get involved', href: '#/volunteer', variant: 'primary' as const, size: 'medium' as const, icon: 'arrow' },
+          { label: 'Support our work', href: '#/donate', variant: 'secondary' as const, size: 'medium' as const, icon: '' },
+        ],
+      },
+      {
+        type: 'focusItems' as const,
+        title: '',
+        layout: 'grid' as const,
+        items: [
+          { label: 'Youth and student development', icon: 'users', href: '#/work' },
+          { label: 'Community outreach and care', icon: 'heart', href: '#/work' },
+          { label: 'Faith, integrity, governance, and trust', icon: 'shield', href: '#/about/what-we-believe' },
+        ],
+      },
+      { type: 'sectionRef' as const, section: 'purpose' as const },
+      { type: 'sectionRef' as const, section: 'programs' as const },
+      { type: 'sectionRef' as const, section: 'impact' as const },
+      { type: 'sectionRef' as const, section: 'projects' as const },
+      { type: 'sectionRef' as const, section: 'stories' as const },
+      { type: 'sectionRef' as const, section: 'events' as const },
+      {
+        type: 'callout' as const,
+        eyebrow: 'Get involved',
+        title: 'Volunteer, partner, give, or help us build the next platform for transformation.',
+        text: 'Ascension Experience Society is designed for collaboration. Join a program, support a project, share a resource, or connect with us about partnership.',
+        primaryLabel: 'Volunteer',
+        primaryHref: '#/volunteer',
+        primarySize: 'medium' as const,
+        secondaryLabel: 'Contact us',
+        secondaryHref: '#/contact',
+        secondarySize: 'medium' as const,
+        align: 'center' as const,
+        style: 'banner' as const,
       },
     ],
   },
+  ...navigationPages,
 ]
 
 export const people = [
@@ -156,6 +285,12 @@ export const people = [
     profileType: 'founder' as const,
     bio: 'Founder profile and biography will be added by the organization.',
     photo: '',
+    frameStyle: 'circle' as const,
+    photoCrop: { x: 50, y: 50, zoom: 1 },
+    images: [],
+    imageCrops: [],
+    carouselSpeed: 4,
+    capabilities: ['Vision', 'Leadership', 'Representation'],
     reportsTo: '',
   },
   {
@@ -165,6 +300,12 @@ export const people = [
     profileType: 'founder' as const,
     bio: 'Co-founder profile and biography will be added by the organization.',
     photo: '',
+    frameStyle: 'circle' as const,
+    photoCrop: { x: 50, y: 50, zoom: 1 },
+    images: [],
+    imageCrops: [],
+    carouselSpeed: 4,
+    capabilities: ['Strategy', 'Mentorship', 'Community building'],
     reportsTo: 'founder',
   },
 ]
@@ -256,21 +397,57 @@ export const footerGroups = [
   { title: 'Legal', links: ['Privacy', 'Terms', 'Safeguarding', 'Cookies'] },
 ]
 
+export const footer = {
+  groups: footerGroups.map((group) => ({
+    title: group.title,
+    links: group.links.map((label) => ({ label, href: '', icon: 'arrow' })),
+  })),
+  socialLinks: [
+    { label: 'Facebook', url: '', icon: 'facebook' as const },
+    { label: 'Instagram', url: '', icon: 'instagram' as const },
+    { label: 'LinkedIn', url: '', icon: 'linkedin' as const },
+    { label: 'YouTube', url: '', icon: 'youtube' as const },
+    { label: 'WhatsApp', url: '', icon: 'whatsapp' as const },
+  ],
+}
+
 export const adminSections = [
-  { title: 'Content', items: ['Pages', 'Programs', 'Projects', 'Stories', 'News', 'Events', 'Resources'] },
-  { title: 'Impact', items: ['Impact Statistics', 'Beneficiaries', 'Projects', 'Stories of Change', 'Reports'] },
-  { title: 'People', items: ['Leadership', 'Board', 'Volunteers', 'Mentors', 'Partners'] },
-  { title: 'Media', items: ['Images', 'Videos', 'Documents', 'Gallery'] },
+  { title: 'Content', items: ['Pages', 'Our Work'] },
+  { title: 'Organization', items: ['Leadership'] },
+  { title: 'Media', items: ['Images', 'Videos', 'Social Videos', 'Documents'] },
   {
     title: 'Engagement',
     items: ['Contact Inquiries', 'Volunteer Applications', 'Mentor Applications', 'Partnership Inquiries', 'Event Registrations'],
   },
-  { title: 'Website', items: ['Navigation', 'Footer', 'Homepage', 'Page Builder', 'SEO', 'Redirects'] },
-  { title: 'System', items: ['Users', 'Roles', 'Permissions', 'Activity Log', 'Git History', 'Deployment', 'Settings'] },
+  { title: 'Website', items: ['Footer', 'Page Transitions', 'SEO', 'Redirects'] },
+  { title: 'System', items: ['Users & Permissions', 'Activity Log', 'Git History', 'Deployment', 'Settings'] },
+]
+
+export const roles = [
+  { role: 'Developer', email: 'Required', mfa: 'Required', access: 'Protected full system access' },
+  { role: 'Super Admin', email: 'Required', mfa: 'Required', access: 'Full system access' },
+  { role: 'Administrator', email: 'Required', mfa: 'Required', access: 'Content, users, media, publishing' },
+  { role: 'Publisher', email: 'Required', mfa: 'Required', access: 'Review, approve, publish' },
+  { role: 'Editor', email: 'Required', mfa: 'Required', access: 'Draft and submit for review' },
+  { role: 'Viewer', email: 'Required', mfa: 'Optional', access: 'Read only' },
+]
+
+export const adminUsers = [
+  {
+    name: 'Tony Mburu',
+    email: 'antonymburu379@gmail.com',
+    role: 'Developer' as const,
+    protected: true,
+    emailVerification: 'Required' as const,
+    mfa: 'Required' as const,
+    accessAreas: adminSections.map((section) => section.title),
+  },
 ]
 
 export const defaultSiteContent: SiteContent = {
   organization,
+  appearance,
+  menuGroups,
   programs,
   pages,
   peopleRoles,
@@ -280,15 +457,16 @@ export const defaultSiteContent: SiteContent = {
   news,
   upcomingEvents,
   impactStats,
+  mediaLibrary: {
+    images: [],
+    videos: [],
+    socialVideos: [],
+    documents: [],
+  },
+  engagement: [],
+  footer,
+  adminUsers,
 }
-
-export const roles = [
-  { role: 'Super Admin', email: 'Required', mfa: 'Required', access: 'Full system access' },
-  { role: 'Administrator', email: 'Required', mfa: 'Required', access: 'Content, users, media, publishing' },
-  { role: 'Publisher', email: 'Required', mfa: 'Required', access: 'Review, approve, publish' },
-  { role: 'Editor', email: 'Required', mfa: 'Required', access: 'Draft and submit for review' },
-  { role: 'Viewer', email: 'Required', mfa: 'Optional', access: 'Read only' },
-]
 
 export const activity = [
   'Youth program updated',

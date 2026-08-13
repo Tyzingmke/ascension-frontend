@@ -2,7 +2,7 @@ import { defineConfig } from 'vite'
 
 export default defineConfig({
   root: 'apps/website',
-  base: process.env.GITHUB_PAGES === 'true' ? '/ascension-site/' : '/',
+  base: process.env.GITHUB_PAGES === 'true' ? '/ascension-frontend/' : '/',
   publicDir: '../../public',
   server: {
     fs: {
