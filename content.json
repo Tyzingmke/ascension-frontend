@@ -324,7 +324,7 @@
           "blockMaxWidth": 0,
           "blockAlign": "left",
           "blockOffsetX": 0,
-          "blockOffsetY": 0,
+          "blockOffsetY": -56,
           "titleColor": "#759fff"
         },
         {
