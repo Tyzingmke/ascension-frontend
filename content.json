@@ -295,7 +295,7 @@
       "settings": {
         "pageStyle": "standard",
         "contentWidth": "wide",
-        "textAlign": "left",
+        "textAlign": "center",
         "heroImages": [],
         "heroImageOpacity": 0.35,
         "heroCarousel": false,
