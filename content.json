@@ -373,7 +373,7 @@
             }
           ],
           "pairHeight": 620,
-          "pairOffset": 33,
+          "pairOffset": -56,
           "tableHeight": 560,
           "blockAlign": "wide",
           "blockMaxWidth": 0,
