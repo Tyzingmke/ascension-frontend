@@ -321,14 +321,16 @@
               "italic": false
             }
           ],
-          "titleSize": 62,
+          "titleSize": 64,
           "textSize": 18,
           "minHeight": 620,
           "imageUrls": [],
           "imageOpacity": 0.35,
           "carousel": false,
           "blockAlign": "wide",
-          "blockMaxWidth": 1180
+          "blockMaxWidth": 0,
+          "blockOffsetX": 0,
+          "blockOffsetY": 0
         },
         {
           "type": "focusItems",
@@ -337,21 +339,21 @@
           "tableWidth": 100,
           "tableColumns": 1,
           "itemOrientation": "icon-left",
-          "itemHeight": 78,
-          "itemGap": 14,
+          "itemHeight": 86,
+          "itemGap": 12,
           "attachToPrevious": true,
           "pairWithPrevious": true,
           "pairSide": "right",
           "columnSide": "right",
-          "columnWidth": 40,
-          "pairWidth": 40,
+          "columnWidth": 50,
+          "pairWidth": 50,
           "pairCombinedWidth": 1180,
           "pairCombinedHeight": 620,
-          "pairGap": 46,
-          "pairAlign": "center",
+          "pairGap": 36,
+          "pairAlign": "stretch",
           "pairSeparator": "line",
           "pairSeparatorSize": 1,
-          "pairSeparatorColor": "#c8d7cc",
+          "pairSeparatorColor": "#d7ded4",
           "pairSeparatorOffset": 0,
           "items": [
             {
@@ -369,7 +371,14 @@
               "icon": "shield",
               "href": "/about/beliefs"
             }
-          ]
+          ],
+          "pairHeight": 620,
+          "pairOffset": 0,
+          "tableHeight": 560,
+          "blockAlign": "wide",
+          "blockMaxWidth": 0,
+          "blockOffsetX": 0,
+          "blockOffsetY": 0
         },
         {
           "type": "heroActions",
