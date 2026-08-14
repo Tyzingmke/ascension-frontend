@@ -336,7 +336,7 @@
           "type": "focusItems",
           "title": "Focus Areas",
           "layout": "stack",
-          "tableWidth": 100,
+          "tableWidth": 90,
           "tableColumns": 1,
           "itemOrientation": "icon-left",
           "itemHeight": 86,
