@@ -377,8 +377,8 @@
           "tableHeight": 560,
           "blockAlign": "wide",
           "blockMaxWidth": 0,
-          "blockOffsetX": 95,
-          "blockOffsetY": -146,
+          "blockOffsetX": 58,
+          "blockOffsetY": 110,
           "blockMarginTop": -28,
           "blockMarginBottom": 35,
           "titleFont": "Source Sans 3"
