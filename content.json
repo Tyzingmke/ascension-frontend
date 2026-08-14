@@ -377,8 +377,11 @@
           "tableHeight": 560,
           "blockAlign": "wide",
           "blockMaxWidth": 0,
-          "blockOffsetX": 0,
-          "blockOffsetY": 0
+          "blockOffsetX": -44,
+          "blockOffsetY": -33,
+          "blockMarginTop": -28,
+          "blockMarginBottom": 35,
+          "titleFont": "Source Sans 3"
         },
         {
           "type": "heroActions",
