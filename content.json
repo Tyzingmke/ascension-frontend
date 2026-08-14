@@ -293,7 +293,7 @@
       "menuGroup": "Homepage",
       "status": "Published",
       "settings": {
-        "pageStyle": "editorial",
+        "pageStyle": "standard",
         "contentWidth": "wide",
         "textAlign": "left",
         "heroImages": [],
