@@ -345,7 +345,7 @@
           "pairWithPrevious": true,
           "pairSide": "right",
           "columnSide": "right",
-          "columnWidth": 50,
+          "columnWidth": 37,
           "pairWidth": 50,
           "pairCombinedWidth": 1180,
           "pairCombinedHeight": 620,
