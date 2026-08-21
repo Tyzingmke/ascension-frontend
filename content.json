@@ -293,14 +293,14 @@
       "menuGroup": "Homepage",
       "status": "Published",
       "settings": {
-        "pageStyle": "editorial",
-        "contentWidth": "wide",
+        "pageStyle": "standard",
+        "contentWidth": "standard",
         "textAlign": "left",
         "heroImages": [],
         "heroImageOpacity": 0.35,
         "heroCarousel": false,
         "backgroundImages": [],
-        "backgroundOpacity": 0.08,
+        "backgroundOpacity": 0.2,
         "backgroundCarousel": false,
         "titleFont": "",
         "titleSize": 0,
@@ -313,272 +313,69 @@
           "eyebrow": "Impact. Disrupt. Influence the ecosystem.",
           "title": "Transforming People. Strengthening Communities. Creating Lasting Impact.",
           "text": "A community-based organization committed to empowering people, developing responsible leaders, supporting vulnerable communities, and creating sustainable social impact.",
-          "textSegments": [
-            {
-              "text": "A community-based organization committed to empowering people, developing responsible leaders, supporting vulnerable communities, and creating sustainable social impact.",
-              "align": "left",
-              "bold": false,
-              "italic": false
-            }
-          ],
-          "titleSize": 64,
-          "textSize": 18,
+          "titleFont": "",
+          "titleSize": 72,
+          "textFont": "",
+          "textSize": 22,
           "minHeight": 620,
           "imageUrls": [],
           "imageOpacity": 0.35,
           "carousel": false,
-          "blockAlign": "wide",
           "blockMaxWidth": 0,
-          "blockOffsetX": 0,
-          "blockOffsetY": 0
+          "blockAlign": "left",
+          "blockOffsetX": -38,
+          "blockOffsetY": -56
         },
         {
           "type": "focusItems",
-          "title": "Focus Areas",
+          "title": "Focus Items",
           "layout": "stack",
-          "tableWidth": 43,
-          "tableColumns": 1,
-          "itemOrientation": "icon-left",
-          "itemHeight": 86,
-          "itemGap": 12,
-          "attachToPrevious": false,
-          "pairWithPrevious": false,
-          "pairSide": "right",
-          "columnSide": "right",
-          "columnWidth": 100,
-          "pairWidth": 100,
-          "pairCombinedWidth": 7328,
-          "pairCombinedHeight": 620,
-          "pairGap": 54,
-          "pairAlign": "stretch",
-          "pairSeparator": "line",
-          "pairSeparatorSize": 1,
-          "pairSeparatorColor": "#d7ded4",
-          "pairSeparatorOffset": 0,
           "items": [
             {
               "label": "Youth and student development",
               "icon": "users",
-              "href": "/work/student-youth-development"
+              "href": "#/"
             },
             {
               "label": "Community outreach and care",
               "icon": "heart",
-              "href": "/work/women-empowerment"
+              "href": "#/"
             },
             {
               "label": "Faith, integrity, governance, and trust",
               "icon": "shield",
-              "href": "/about/beliefs"
+              "href": "#/"
             }
           ],
+          "pairWithPrevious": true,
+          "attachToPrevious": true,
+          "pairSide": "right",
+          "columnSide": "right",
+          "pairWidth": 34,
+          "columnWidth": 34,
+          "pairOffset": 0,
+          "pairAlign": "stretch",
+          "pairGap": 36,
+          "blockOffsetX": 0,
+          "pairSeparator": "line",
+          "tableWidth": 100,
           "pairHeight": 620,
-          "pairOffset": -56,
+          "pairSeparatorSize": 1,
+          "pairSeparatorColor": "#d7ded4",
+          "pairSeparatorOffset": 0,
           "tableHeight": 560,
+          "tableColumns": 1,
+          "itemOrientation": "icon-left",
+          "itemHeight": 86,
+          "itemGap": 12,
+          "blockOffsetY": 0,
+          "blockBackgroundImage": "",
+          "blockBackgroundOpacity": 0.05,
+          "blockBackgroundFit": "contain",
+          "pairCombinedWidth": 1180,
+          "pairCombinedHeight": 620,
           "blockAlign": "wide",
-          "blockMaxWidth": 0,
-          "blockOffsetX": 58,
-          "blockOffsetY": 110,
-          "blockMarginTop": -28,
-          "blockMarginBottom": 35,
-          "titleFont": "Source Sans 3"
-        },
-        {
-          "type": "heroActions",
-          "align": "center",
-          "actions": [
-            {
-              "label": "Get involved",
-              "href": "/volunteer",
-              "variant": "primary",
-              "size": "large",
-              "icon": "arrow"
-            },
-            {
-              "label": "Explore our work",
-              "href": "/work/student-youth-development",
-              "variant": "secondary",
-              "size": "large",
-              "icon": "target"
-            }
-          ],
-          "blockAlign": "center",
-          "blockMaxWidth": 900,
-          "blockMarginTop": -32,
-          "blockMarginBottom": 28
-        },
-        {
-          "type": "cards",
-          "title": "What We Build",
-          "intro": "Explore the major areas of Ascension Experience Society. These cards pull directly from editable work pages, so updates remain connected.",
-          "layout": "carousel",
-          "hoverEffect": "lift",
-          "cardRadius": "soft",
-          "cardHeight": 260,
-          "textAlign": "left",
-          "source": "programs",
-          "cards": [],
-          "blockMarginTop": 18
-        },
-        {
-          "type": "sectionRef",
-          "section": "purpose"
-        },
-        {
-          "type": "columns",
-          "title": "Impact and Involvement",
-          "columnCount": 2,
-          "columnHeight": 420,
-          "verticalAlign": "stretch",
-          "columns": [
-            [
-              {
-                "type": "sectionRef",
-                "section": "impact"
-              }
-            ],
-            [
-              {
-                "type": "cards",
-                "title": "Ways to Connect",
-                "intro": "Quick paths for visitors who want to serve, partner, mentor, give, or learn more.",
-                "layout": "grid",
-                "hoverEffect": "glow",
-                "cardRadius": "soft",
-                "cardHeight": 170,
-                "textAlign": "left",
-                "source": "manual",
-                "cards": [
-                  {
-                    "title": "Volunteer",
-                    "text": "Join outreach, events, care, and program teams.",
-                    "href": "/volunteer",
-                    "image": "",
-                    "icon": "hand-heart"
-                  },
-                  {
-                    "title": "Partner",
-                    "text": "Collaborate with Ascension on projects and community initiatives.",
-                    "href": "/partner",
-                    "image": "",
-                    "icon": "heart"
-                  },
-                  {
-                    "title": "Mentor",
-                    "text": "Support youth and emerging leaders through guidance.",
-                    "href": "/mentor",
-                    "image": "",
-                    "icon": "users"
-                  }
-                ]
-              }
-            ]
-          ]
-        },
-        {
-          "type": "cards",
-          "title": "Inside Ascension",
-          "intro": "These cards can display pages from the About section automatically and keep the homepage linked to deeper content.",
-          "layout": "grid",
-          "hoverEffect": "zoom",
-          "cardRadius": "soft",
-          "cardHeight": 230,
-          "textAlign": "left",
-          "source": "pages",
-          "sourceGroup": "About",
-          "cards": []
-        },
-        {
-          "type": "sectionRef",
-          "section": "projects"
-        },
-        {
-          "type": "sectionRef",
-          "section": "stories"
-        },
-        {
-          "type": "columns",
-          "title": "Updates and Enquiries",
-          "columnCount": 2,
-          "columnHeight": 520,
-          "verticalAlign": "stretch",
-          "columns": [
-            [
-              {
-                "type": "sectionRef",
-                "section": "events"
-              }
-            ],
-            [
-              {
-                "type": "form",
-                "title": "Send an Enquiry",
-                "intro": "Reach the Ascension team about volunteering, partnership, giving, events, or general information.",
-                "submitLabel": "Send Enquiry",
-                "formKind": "contact",
-                "actionType": "email",
-                "actionTarget": "info@ascensionexperience.org",
-                "fields": [
-                  {
-                    "label": "Name",
-                    "type": "text",
-                    "required": true
-                  },
-                  {
-                    "label": "Email",
-                    "type": "email",
-                    "required": true
-                  },
-                  {
-                    "label": "Phone",
-                    "type": "tel",
-                    "required": false
-                  },
-                  {
-                    "label": "Message",
-                    "type": "textarea",
-                    "required": true
-                  }
-                ]
-              }
-            ]
-          ]
-        },
-        {
-          "type": "socialLinks",
-          "title": "Stay Connected",
-          "intro": "Add the official organization social links in the footer or edit them here for this homepage section.",
-          "links": [
-            {
-              "label": "Email",
-              "url": "mailto:info@ascensionexperience.org",
-              "icon": "email"
-            },
-            {
-              "label": "WhatsApp",
-              "url": "https://wa.me/254759238918",
-              "icon": "whatsapp"
-            },
-            {
-              "label": "Website",
-              "url": "/",
-              "icon": "website"
-            }
-          ]
-        },
-        {
-          "type": "callout",
-          "eyebrow": "Get involved",
-          "title": "Volunteer, partner, give, or help us build the next platform for transformation.",
-          "text": "Ascension Experience Society is designed for collaboration. Join a program, support a project, share a resource, or connect with us about partnership.",
-          "primaryLabel": "Volunteer",
-          "primaryHref": "/volunteer",
-          "primarySize": "large",
-          "secondaryLabel": "Contact us",
-          "secondaryHref": "/contact",
-          "secondarySize": "large",
-          "align": "center",
-          "style": "banner"
+          "blockMaxWidth": 0
         }
       ]
     },
@@ -621,17 +418,7 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Coming soon ",
-          "segments": [
-            {
-              "text": "Coming soon ",
-              "align": "left",
-              "bold": false,
-              "italic": false,
-              "underline": false
-            }
-          ],
-          "icon": ""
+          "text": "Our Story content can be edited from the CMS Pages section."
         }
       ],
       "settings": {
